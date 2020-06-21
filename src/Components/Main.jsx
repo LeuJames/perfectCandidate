@@ -16,7 +16,7 @@ const Main = () => {
                 <p>Looking for a full stack developer? Check out this recipe for a Full Stack Developer Sandwich!</p>
               </div>
               <div className='card-footer'>
-                <button onClick = { () => navigate('/sandwich')} className="btn btn-primary m-4">See Recipe</button>
+                <button onClick = { () => navigate(process.env.PUBLIC_URL + '/sandwich')} className="btn btn-primary m-4">See Recipe</button>
               </div>
             </div>
           </div>
@@ -29,7 +29,7 @@ const Main = () => {
                 <p>Looking for a business professional? Check out this recipe for a Business Professional Pizza!</p>
               </div>
               <div className='card-footer'>
-                <button onClick = { () => navigate('/pizza')} className="btn btn-primary m-4">See Recipe</button>
+                <button onClick = { () => navigate(process.env.PUBLIC_URL + '/pizza')} className="btn btn-primary m-4">See Recipe</button>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ const Main = () => {
                 <p>Looking for a candidate with the right set of soft skills? Check out this recipe for a Soft Skills Burger!</p>
               </div>
               <div className='card-footer'>
-                <button onClick = { () => navigate('/burger')} className="btn btn-primary m-4">See Recipe</button>
+                <button onClick = { () => navigate(process.env.PUBLIC_URL + '/burger')} className="btn btn-primary m-4">See Recipe</button>
               </div>
             </div>
           </div>

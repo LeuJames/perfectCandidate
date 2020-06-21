@@ -19,7 +19,7 @@ function App() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href={process.env.PUBLIC_URL + '/'}>Home</Nav.Link>
             <Nav.Link onClick={()=>setShow(true)} >Contact</Nav.Link>
             <NavDropdown title="Recipes" id="basic-nav-dropdown">
               <NavDropdown.Item href={process.env.PUBLIC_URL + "/sandwich"}>Web Developer Sandwich</NavDropdown.Item>
