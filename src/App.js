@@ -22,11 +22,11 @@ function App() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link onClick={()=>setShow(true)} >Contact</Nav.Link>
             <NavDropdown title="Recipes" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/sandwich">Web Developer Sandwich</NavDropdown.Item>
-              <NavDropdown.Item href="/pizza">Business Professional Pizza</NavDropdown.Item>
-              <NavDropdown.Item href="/burger">Soft Skills Burger</NavDropdown.Item>
+              <NavDropdown.Item href={process.env.PUBLIC_URL + "/sandwich"}>Web Developer Sandwich</NavDropdown.Item>
+              <NavDropdown.Item href={process.env.PUBLIC_URL + "/pizza"}>Business Professional Pizza</NavDropdown.Item>
+              <NavDropdown.Item href={process.env.PUBLIC_URL + "/burger"}>Soft Skills Burger</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">All Recipes</NavDropdown.Item>
+              <NavDropdown.Item href={process.env.PUBLIC_URL + "/"}>All Recipes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           {/* <Form inline>
@@ -42,10 +42,10 @@ function App() {
         <h4>Are you a hiring manager or recruiter looking for the perfect candidate? We have just the recipes for you!</h4>
       </div>
       <Router>
-        <Main path='/'/>
-        <Sandwich path='/sandwich'/>
-        <Pizza path='/pizza'/>
-        <Burger path='/burger'/>
+        <Main path={process.env.PUBLIC_URL + '/'}/>
+        <Sandwich path={process.env.PUBLIC_URL + '/sandwich'}/>
+        <Pizza path={process.env.PUBLIC_URL + '/pizza'}/>
+        <Burger path={process.env.PUBLIC_URL + '/burger'}/>
       </Router>
 
       <Modal show={show} onHide={handleClose}>
