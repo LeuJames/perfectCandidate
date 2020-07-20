@@ -13,10 +13,6 @@ function App() {
 
   const handleClose = () => setShow(false);
 
-  useEffect(() => {
-    loadReCaptcha();
-  }, []);
-
   return (
     <div className="container-lg">
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
