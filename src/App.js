@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Router} from '@reach/router';
 import { Navbar, Nav, NavDropdown, Modal, Button } from 'react-bootstrap';
@@ -12,6 +12,10 @@ function App() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
+
+  useEffect(() => {
+    loadReCaptcha();
+  }, []);
 
   return (
     <div className="container-lg">
@@ -81,5 +85,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
